@@ -5,8 +5,6 @@
 
 ;;; Code:
 
-(setq custom-safe-themes t)
-
 (require 'theme-nerd-icons)
 (require 'theme-doom)
 
