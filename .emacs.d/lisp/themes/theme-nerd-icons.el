@@ -5,7 +5,8 @@
 
 ;;; Code:
 
-(use-package nerd-icons)
+(use-package nerd-icons
+  :if (display-graphic-p))
 
 (provide 'theme-nerd-icons)
 

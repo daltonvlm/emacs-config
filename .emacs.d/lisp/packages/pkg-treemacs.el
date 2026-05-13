@@ -9,7 +9,8 @@
   :bind
   (("C-c t t" . treemacs)
    ("C-c t s" . treemacs-select-window)
-   ("C-c t f" . treemacs-find-file))
+   ("C-c t f" . treemacs-find-file)
+   ("C-c t ." . treemacs-add-and-display-current-project-exclusively))
 
   :config
   (add-hook 'treemacs-select-hook #'treemacs-peek-mode))
@@ -18,8 +19,16 @@
   :after
   (treemacs nerd-icons)
 
+  ;; :config
+  ;; (treemacs-load-theme "nerd-icons")
+  )
+
+(use-package treemacs-all-the-icons
+  :after
+  (treemacs all-the-icons)
+
   :config
-  (treemacs-load-theme "nerd-icons"))
+  (treemacs-load-theme "all-the-icons"))
 
 (provide 'pkg-treemacs)
 
