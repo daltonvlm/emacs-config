@@ -7,11 +7,17 @@
 
 (use-package go-ts-mode
   :ensure nil
-  :mode ("\\.go\\'")
-  :hook((go-ts-mode . eglot-ensure)
+
+  :custom
+  (go-ts-mode-indent-offset 4)
+ 
+  :mode
+  ("\\.go\\'")
+
+  :hook
+  ((go-ts-mode . eglot-ensure)
 	(go-ts-mode . my-eglot-actions-on-save)
-	(go-ts-mode . (lambda ()
-			(setq tab-width 4)))))
+	(go-ts-mode . (lambda ()))))
 
 (provide 'lang-go)
 
