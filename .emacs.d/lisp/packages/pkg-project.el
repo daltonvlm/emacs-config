@@ -12,7 +12,11 @@
   (project-switch-commands
    '((project-find-file "Find file")
      (project-find-dir "Find dir")
-     (project-eshell "Eshell"))))
+     (project-eshell "Eshell")))
+
+  (compilation-scroll-output t)
+
+  (compilation-always-kill t))
 
 (provide 'pkg-project)
 
