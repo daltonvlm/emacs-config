@@ -12,8 +12,9 @@
    ("C-c t f" . treemacs-find-file)
    ("C-c t ." . treemacs-add-and-display-current-project-exclusively))
 
-  :config
-  (add-hook 'treemacs-select-hook #'treemacs-peek-mode))
+  ;; :config
+  ;; (add-hook 'treemacs-select-hook #'treemacs-peek-mode)
+ )
 
 (use-package treemacs-nerd-icons
   :after
