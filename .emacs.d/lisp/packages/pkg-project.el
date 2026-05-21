@@ -8,6 +8,9 @@
 (use-package project
   :ensure nil
 
+  :bind
+  ("M-<return>" . my/project-recompile)
+
   :custom
   (project-switch-commands
    '((project-find-file "Find file")
@@ -16,7 +19,15 @@
 
   (compilation-scroll-output t)
 
-  (compilation-always-kill t))
+  (compilation-always-kill t)
+
+  :config
+  (defun my/project-recompile ()
+    "Recompile the current project without confirmation."
+    (interactive)
+    (let ((default-directory
+	   (project-root (project-current t))))
+      (recompile))))
 
 (provide 'pkg-project)
 
