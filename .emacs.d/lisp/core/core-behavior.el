@@ -5,6 +5,9 @@
 
 ;;; Code:
 
+(setenv "EDITOR" "emacsclient -c")
+(setenv "GIT_EDITOR" "emacsclient -c")
+
 (setq inhibit-startup-screen t)
 
 (setq make-backup-files nil)
