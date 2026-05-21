@@ -4,6 +4,12 @@
 ;; Session settings.
 
 ;;; Code:
+;;; Emacs server.
+
+(require 'server)
+
+(unless (server-running-p)
+  (server-start))
 
 (savehist-mode 1)
 
