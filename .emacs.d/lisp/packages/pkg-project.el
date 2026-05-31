@@ -9,7 +9,8 @@
   :ensure nil
 
   :bind
-  ("M-<return>" . my/project-recompile)
+  ("C-<return>" . project-recompile)
+  ("M-<return>" . kill-compilation)
 
   :custom
   (project-switch-commands
@@ -21,13 +22,7 @@
 
   (compilation-always-kill t)
 
-  :config
-  (defun my/project-recompile ()
-    "Recompile the current project without confirmation."
-    (interactive)
-    (let ((default-directory
-	   (project-root (project-current t))))
-      (recompile))))
+  )
 
 (provide 'pkg-project)
 
