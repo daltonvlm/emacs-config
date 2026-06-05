@@ -9,8 +9,10 @@
   :ensure nil
 
   :bind
-  ("C-<return>" . project-recompile)
-  ("M-<return>" . kill-compilation)
+  (("C-<return>" . project-recompile)
+   ("M-<return>" . kill-compilation)
+   :map project-prefix-map
+   ("b" . consult-project-buffer))
 
   :custom
   (project-switch-commands
@@ -19,10 +21,7 @@
      (project-eshell "Eshell")))
 
   (compilation-scroll-output t)
-
-  (compilation-always-kill t)
-
-  )
+  (compilation-always-kill t))
 
 (provide 'pkg-project)
 
