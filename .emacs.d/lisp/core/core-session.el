@@ -6,16 +6,32 @@
 ;;; Code:
 ;;; Emacs server.
 
-(require 'server)
+(use-package server
+  :ensure nil
 
-(unless (server-running-p)
-  (server-start))
+  :demand t
 
-(savehist-mode 1)
+  :config
+  (unless (server-running-p)
+    (server-start)))
 
-(desktop-save-mode 1)
-(setq desktop-modes-not-to-save
-      (remove 'info-mode desktop-modes-not-to-save))
+(use-package savehist
+  :ensure nil
+
+  :demand t
+
+  :config
+  (savehist-mode 1))
+
+(use-package desktop
+  :ensure nil
+
+  :demand t
+
+  :config
+  (desktop-save-mode 1)
+  (setq desktop-modes-not-to-save
+        (remove 'info-mode desktop-modes-not-to-save)))
 
 (provide 'core-session)
 

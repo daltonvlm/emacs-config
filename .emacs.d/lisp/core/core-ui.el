@@ -5,11 +5,14 @@
 
 ;;; Code:
 
-(setq display-line-numbers-type 'relative)
-(add-hook 'prog-mode-hook #'display-line-numbers-mode)
-(add-hook 'text-mode-hook #'display-line-numbers-mode)
-
-(global-hl-line-mode 1)
+(use-package emacs
+  :ensure nil
+  :demand t
+  :hook ((prog-mode . display-line-numbers-mode)
+	 (text-mode . display-line-numbers-mode))
+  :config
+  (setq display-line-numbers-type 'relative)
+  (global-hl-line-mode 1))
 
 (provide 'core-ui)
 

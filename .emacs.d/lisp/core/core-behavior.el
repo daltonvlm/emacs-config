@@ -5,26 +5,30 @@
 
 ;;; Code:
 
-(setenv "EDITOR" "emacsclient -c")
-(setenv "GIT_EDITOR" "emacsclient -c")
+(use-package emacs
+  :ensure nil
 
-(setq inhibit-startup-screen t)
+  :init
+  (setenv "EDITOR" "emacsclient -c")
+  (setenv "GIT_EDITOR" "emacsclient -c")
 
-(setq make-backup-files nil)
+  :config
+  (setq inhibit-startup-screen t
+        make-backup-files nil
+        help-window-select t
+        help-window-keep-selected t
+        dictionary-use-single-buffer t
+        visible-bell t)
 
-(repeat-mode 1)
-(setq repeat-exit-key (kbd "ESC"))
+  (repeat-mode 1)
+  (setq repeat-exit-key (kbd "ESC"))
 
-(setq help-window-select t)
-(setq help-window-keep-selected t)
-(add-hook 'help-fns-describe-function-functions
-          #'shortdoc-help-fns-examples-function)
+  (add-hook 'help-fns-describe-function-functions
+            #'shortdoc-help-fns-examples-function)
 
-(setq dictionary-use-single-buffer t)
+  (electric-pair-mode 1)
 
-(setq visible-bell t)
-
-(electric-pair-mode 1)
+  (global-set-key (kbd "C-z") #'undo-only))
 
 (provide 'core-behavior)
 
