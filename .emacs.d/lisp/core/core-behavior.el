@@ -28,7 +28,7 @@
 
   (electric-pair-mode 1)
 
-  (global-set-key (kbd "C-z") #'undo-only))
+  (global-set-key (kbd "C-/") #'undo-only))
 
 (provide 'core-behavior)
 
