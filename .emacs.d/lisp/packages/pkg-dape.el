@@ -9,14 +9,11 @@
   :preface
   (setopt dape-buffer-window-arrangement 'right)
 
-  :bind
-  (:map dape-mode-map
-        ("C-c d d" . dape-debug)
-        ("C-c d c" . dape-continue)
-        ("C-c d s" . dape-step-in)
-        ("C-c d n" . dape-next)
-        ("C-c d o" . dape-step-out)
-        ("C-c d r" . dape-repl)))
+  :hook
+  (kill-emacs . dape-breakpoint-save)
+  (after-init . dape-breakpoint-load)
+  )
+
 
 (provide 'pkg-dape)
 
