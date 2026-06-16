@@ -40,6 +40,9 @@
 ;; diagnostics
 (require 'pkg-flymake)
 
+;; debugging
+(require 'pkg-dape)
+
 ;; visuals
 (require 'pkg-rainbow-delimiters)
 
