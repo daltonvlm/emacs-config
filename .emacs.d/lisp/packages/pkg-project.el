@@ -12,16 +12,7 @@
   (("C-<return>" . project-recompile)
    ("M-<return>" . kill-compilation)
    :map project-prefix-map
-   ("b" . consult-project-buffer))
-
-  :custom
-  (project-switch-commands
-   '((project-find-file "Find file")
-     (project-find-dir "Find dir")
-     (project-eshell "Eshell")))
-
-  (compilation-scroll-output t)
-  (compilation-always-kill t))
+   ("b" . consult-project-buffer)))
 
 (provide 'pkg-project)
 

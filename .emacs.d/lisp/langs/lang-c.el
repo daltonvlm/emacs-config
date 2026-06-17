@@ -5,13 +5,18 @@
 
 ;;; Code:
 
-(setq major-mode-remap-alist
-      '((c-mode . c-ts-mode)
-        (c++-mode . c++-ts-mode)))
-
 (defun my-c-ts-mode-setup ()
-  (setq c-ts-mode-indent-offset 4)
-  (setq indent-tabs-mode nil))
+  (setq-local c-ts-mode-indent-offset 4)
+  (setq-local indent-tabs-mode nil))
+
+(use-package emacs
+  :ensure nil
+
+  :init
+  (add-to-list 'major-mode-remap-alist
+               '(c-mode . c-ts-mode))
+  (add-to-list 'major-mode-remap-alist
+               '(c++-mode . c++-ts-mode)))
 
 (use-package c-ts-mode
   :ensure nil

@@ -28,7 +28,8 @@
   (treemacs all-the-icons)
 
   :config
-  (treemacs-load-theme "all-the-icons"))
+  (treemacs-load-theme "all-the-icons")
+  )
 
 (provide 'pkg-treemacs)
 

@@ -8,7 +8,7 @@
 (use-package which-key
   :ensure nil
 
-  :config
+  :init
   (which-key-mode 1))
 
 (provide 'pkg-which-key)

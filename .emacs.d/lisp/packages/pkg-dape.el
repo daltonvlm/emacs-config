@@ -11,9 +11,7 @@
 
   :hook
   (kill-emacs . dape-breakpoint-save)
-  (after-init . dape-breakpoint-load)
-  )
-
+  (after-init . dape-breakpoint-load))
 
 (provide 'pkg-dape)
 

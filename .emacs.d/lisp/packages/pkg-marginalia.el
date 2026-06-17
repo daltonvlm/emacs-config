@@ -7,7 +7,7 @@
 
 (use-package marginalia
   :init
-  (marginalia-mode))
+  (marginalia-mode 1))
 
 (provide 'pkg-marginalia)
 

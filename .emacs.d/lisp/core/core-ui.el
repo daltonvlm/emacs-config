@@ -7,11 +7,14 @@
 
 (use-package emacs
   :ensure nil
-  :demand t
+
+  :custom
+  (display-line-numbers-type 'relative)
+
   :hook ((prog-mode . display-line-numbers-mode)
-	 (text-mode . display-line-numbers-mode))
-  :config
-  (setq display-line-numbers-type 'relative)
+         (text-mode . display-line-numbers-mode))
+
+  :init
   (global-hl-line-mode 1))
 
 (provide 'core-ui)

@@ -8,27 +8,45 @@
 (use-package emacs
   :ensure nil
 
+  :custom
+  (inhibit-startup-screen t)
+  (make-backup-files nil)
+  (help-window-select t)
+  (help-window-keep-selected t)
+  (visible-bell t)
+
+  :bind
+  ("C-/" . undo-only)
+
+  :hook
+  (help-fns-describe-function-functions
+   . shortdoc-help-fns-examples-function)
+
   :init
   (setenv "EDITOR" "emacsclient -c")
-  (setenv "GIT_EDITOR" "emacsclient -c")
+  (setenv "GIT_EDITOR" "emacsclient -c"))
 
-  :config
-  (setq inhibit-startup-screen t
-        make-backup-files nil
-        help-window-select t
-        help-window-keep-selected t
-        dictionary-use-single-buffer t
-        visible-bell t)
+(use-package repeat
+  :ensure nil
 
-  (repeat-mode 1)
-  (setq repeat-exit-key (kbd "ESC"))
+  :custom
+  (repeat-exit-key (kbd "ESC"))
 
-  (add-hook 'help-fns-describe-function-functions
-            #'shortdoc-help-fns-examples-function)
+  :init
+  (repeat-mode 1))
 
-  (electric-pair-mode 1)
+(use-package elec-pair
+  :ensure nil
 
-  (global-set-key (kbd "C-/") #'undo-only))
+  :init
+  (electric-pair-mode 1))
+
+(use-package dictionary
+  :ensure nil
+
+  :custom
+  (dictionary-use-single-buffer t))
+
 
 (provide 'core-behavior)
 

@@ -9,8 +9,6 @@
 (use-package server
   :ensure nil
 
-  :demand t
-
   :config
   (unless (server-running-p)
     (server-start)))
@@ -18,20 +16,16 @@
 (use-package savehist
   :ensure nil
 
-  :demand t
-
-  :config
+  :init
   (savehist-mode 1))
 
 (use-package desktop
   :ensure nil
 
-  :demand t
-
   :config
-  (desktop-save-mode 1)
   (setq desktop-modes-not-to-save
-        (remove 'info-mode desktop-modes-not-to-save)))
+        (remove 'info-mode desktop-modes-not-to-save))
+  (desktop-save-mode 1))
 
 (provide 'core-session)
 
