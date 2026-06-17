@@ -33,7 +33,7 @@
 (require 'pkg-corfu)
 
 ;; completion extensions
-;;(require 'pkg-cape)
+(require 'pkg-cape)
 
 ;; syntax / parsing
 (require 'pkg-treesit)
