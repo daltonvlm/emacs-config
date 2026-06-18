@@ -11,8 +11,7 @@
   (add-to-list 'completion-at-point-functions #'cape-file t)
   (add-to-list 'completion-at-point-functions #'cape-keyword t)
   (add-to-list 'completion-at-point-functions #'cape-elisp-block t)
-  (add-to-list 'completion-at-point-functions #'cape-elisp-symbol t)
-  (add-to-list 'completion-at-point-functions #'cape-include t))
+  (add-to-list 'completion-at-point-functions #'cape-elisp-symbol t))
 
 (provide 'pkg-cape)
 
