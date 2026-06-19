@@ -14,6 +14,8 @@
   :custom
   (go-ts-mode-indent-offset 4)
 
+  :mode "\\.go\\'"
+
   :hook
   ((go-ts-mode . eglot-ensure)
    (go-ts-mode . my-eglot-actions-on-save)

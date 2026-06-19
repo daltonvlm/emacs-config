@@ -32,11 +32,11 @@
 ;; in-buffer completion UI
 (require 'pkg-corfu)
 
-;; completion extensions
-(require 'pkg-cape)
-
 ;; syntax / parsing
 (require 'pkg-treesit)
+
+;; completion extensions
+(require 'pkg-cape)
 
 ;; LSP
 (require 'pkg-eglot)

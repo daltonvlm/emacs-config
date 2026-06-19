@@ -15,22 +15,6 @@
   :hook
   (treemacs-mode . treemacs-project-follow-mode))
 
-(use-package treemacs-nerd-icons
-  :after
-  (treemacs nerd-icons)
-
-  ;; :config
-  ;; (treemacs-load-theme "nerd-icons")
-  )
-
-(use-package treemacs-all-the-icons
-  :after
-  (treemacs all-the-icons)
-
-  :config
-  (treemacs-load-theme "all-the-icons")
-  )
-
 (provide 'pkg-treemacs)
 
 ;;; pkg-treemacs.el ends here

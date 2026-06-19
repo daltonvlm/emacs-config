@@ -8,8 +8,8 @@
 (let ((lisp-dir (expand-file-name "lisp" user-emacs-directory)))
   (add-to-list 'load-path (expand-file-name "core" lisp-dir))
   (add-to-list 'load-path (expand-file-name "packages" lisp-dir))
-  (add-to-list 'load-path (expand-file-name "themes" lisp-dir))
-  (add-to-list 'load-path (expand-file-name "langs" lisp-dir)))
+  (add-to-list 'load-path (expand-file-name "langs" lisp-dir))
+  (add-to-list 'load-path (expand-file-name "themes" lisp-dir)))
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
@@ -44,7 +44,7 @@
 (mapc #'require
       '(init-core
 	init-packages
-	init-themes
-        init-langs))
+	init-langs
+	init-themes))
 
 ;;; init.el ends here
