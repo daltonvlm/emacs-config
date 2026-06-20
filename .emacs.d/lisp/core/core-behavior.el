@@ -14,6 +14,7 @@
   (help-window-select t)
   (help-window-keep-selected t)
   (visible-bell t)
+  (enable-recursive-minibuffers t)
 
   :bind
   ("C-/" . undo-only)
