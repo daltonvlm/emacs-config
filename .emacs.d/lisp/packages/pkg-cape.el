@@ -8,6 +8,7 @@
 (use-package cape
   :bind
   ("C-c p" . cape-prefix-map)
+
   :init
   (add-to-list 'completion-at-point-functions #'cape-elisp-symbol t)
   (add-to-list 'completion-at-point-functions #'cape-elisp-block t)
