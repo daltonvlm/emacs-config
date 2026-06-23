@@ -10,7 +10,7 @@
 
   :bind
   (("C-<return>" . project-recompile)
-   ("M-<return>" . kill-compilation)
+   ("M-RET" . kill-compilation)
    :map project-prefix-map
    ("b" . consult-project-buffer)))
 
