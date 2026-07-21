@@ -5,6 +5,12 @@
 
 ;;; Code:
 
+(defun insert-line-above ()
+  (interactive)
+  (beginning-of-line)
+  (open-line 1)
+  (indent-according-to-mode))
+
 (use-package emacs
   :ensure nil
 
@@ -17,7 +23,8 @@
   (enable-recursive-minibuffers t)
 
   :bind
-  ("C-/" . undo-only)
+  (("C-/" . undo-only)
+   ("C-c o" . insert-line-above))
 
   :hook
   (help-fns-describe-function-functions
