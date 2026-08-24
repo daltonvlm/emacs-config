@@ -12,6 +12,7 @@
   (corfu-preview-current nil)
   (corfu-auto-delay 0.2)
   (corfu-auto-prefix 1)
+  (global-corfu-modes '(not eshell-mode comint-mode term-mode vterm-mode))
 
   :init
   (global-corfu-mode))
