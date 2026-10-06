@@ -34,6 +34,12 @@
   (setenv "EDITOR" "emacsclient -c")
   (setenv "GIT_EDITOR" "emacsclient -c"))
 
+(use-package dired
+  :ensure nil
+
+  :custom
+  (dired-kill-when-opening-new-dired-buffer t))
+
 (use-package repeat
   :ensure nil
 
