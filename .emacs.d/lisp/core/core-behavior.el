@@ -61,6 +61,11 @@
   :custom
   (dictionary-use-single-buffer t))
 
+(use-package windmove
+  :ensure nil
+
+  :config
+  (windmove-default-keybindings))
 
 (provide 'core-behavior)
 
