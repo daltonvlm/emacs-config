@@ -31,6 +31,7 @@
    . shortdoc-help-fns-examples-function)
 
   :init
+  (global-auto-revert-mode 1)
   (setenv "EDITOR" "emacsclient -c")
   (setenv "GIT_EDITOR" "emacsclient -c"))
 
