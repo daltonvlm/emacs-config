@@ -8,6 +8,17 @@
 (defun my-go-ts-mode-setup ()
   (setq-local tab-width 4))
 
+(setq-default eglot-workspace-configuration
+              '(:gopls
+                (:hints
+                 (:assignVariableTypes t
+                  :compositeLiteralFields t
+                  :compositeLiteralTypes t
+                  :constantValues t
+                  :functionTypeParameters t
+                  :parameterNames t
+                  :rangeVariableTypes t))))
+
 (use-package go-ts-mode
   :ensure nil
 
