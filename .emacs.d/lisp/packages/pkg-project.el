@@ -5,7 +5,7 @@
 
 ;;; Code:
 
-(defun my/project-recompile-save-current-buffer (&rest _)
+(defun my-project-recompile-save-current-buffer (&rest _)
   "Save the current buffer before calling `project-recompile`.
 Only save when the buffer is visiting a file and has unsaved changes."
   (when (and (buffer-file-name)
@@ -23,7 +23,7 @@ Only save when the buffer is visiting a file and has unsaved changes."
 
   :config
   (advice-add 'project-recompile :before
-              #'my/project-recompile-save-current-buffer))
+              #'my-project-recompile-save-current-buffer))
 
 (provide 'pkg-project)
 
