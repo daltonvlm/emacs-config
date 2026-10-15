@@ -5,12 +5,12 @@
 
 ;;; Code:
 
-(defun my/eglot-capf-setup ()
+(defun my-eglot-capf-setup ()
   (setq-local completion-at-point-functions
 	      (list
 	       (cape-capf-super
 		#'cape-file
-		#'cape-dabbrev
+		;;#'cape-dabbrev
 		#'eglot-completion-at-point))))
 
 (use-package eglot
@@ -29,7 +29,7 @@
         ("C-c e o" . eglot-code-action-organize-imports))
 
   :hook
-  (eglot-managed-mode . my/eglot-capf-setup))
+  (eglot-managed-mode . my-eglot-capf-setup))
 
 
 (provide 'pkg-eglot)
