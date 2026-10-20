@@ -6,7 +6,7 @@
 ;;; Code:
 
 (defun my-c-ts-mode-setup ()
-  (setq-local c-ts-mode-indent-offset 4)
+  ;;(setq-local c-ts-mode-indent-offset 4)
   (setq-local indent-tabs-mode nil))
 
 (use-package emacs
