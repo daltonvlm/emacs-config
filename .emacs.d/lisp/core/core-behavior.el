@@ -32,6 +32,7 @@
 
   :init
   (global-auto-revert-mode 1)
+  (delete-selection-mode 1)
   (setenv "EDITOR" "emacsclient -c")
   (setenv "GIT_EDITOR" "emacsclient -c"))
 
