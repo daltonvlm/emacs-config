@@ -13,7 +13,8 @@
         (go     "https://github.com/tree-sitter/tree-sitter-go")
 	(gomod  "https://github.com/camdencheek/tree-sitter-go-mod")
 	(json "https://github.com/tree-sitter/tree-sitter-json")
-	(lua "https://github.com/tree-sitter-grammars/tree-sitter-lua")))
+	(lua "https://github.com/tree-sitter-grammars/tree-sitter-lua")
+	(sql "https://github.com/derekstride/tree-sitter-sql" "gh-pages")))
 
 (dolist (entry treesit-language-source-alist)
   (let ((lang (car entry)))
