@@ -15,7 +15,10 @@
   (global-corfu-modes '(not eshell-mode comint-mode term-mode vterm-mode))
 
   :init
-  (global-corfu-mode))
+  (global-corfu-mode)
+
+  :config
+  (corfu-popupinfo-mode 1))
 
 (provide 'pkg-corfu)
 
